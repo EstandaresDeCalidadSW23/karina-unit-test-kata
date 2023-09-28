@@ -9,4 +9,4 @@ test("should return '0s' for 0 seconds", function () {
 
   // expectation
   expect(result).toEqual("0s");
-});
+}); 
