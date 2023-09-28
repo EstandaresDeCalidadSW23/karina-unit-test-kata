@@ -10,3 +10,38 @@ test("should return '0s' for 0 seconds", function () {
   // expectation
   expect(result).toEqual("0s");
 }); 
+// test/time.test.js
+
+// other tests...
+
+test("should return '2s' for 2 seconds", function () {
+  // setup
+  const seconds = 2;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("2s");
+});
+
+test("should return '3s' for 3 seconds", function () {
+  // setup
+  const seconds = 3;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("3s");
+});
+test("should return '59s' for 59 seconds", function () {
+  // setup
+  const seconds = 59;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("59s");
+});
