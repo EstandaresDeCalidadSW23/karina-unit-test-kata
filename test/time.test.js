@@ -98,3 +98,46 @@ test("should return '59m' for 59 minutes", function () {
   // expectation
   expect(result).toEqual("59m");
 });
+
+test("should return '1h' for 3600 seconds (1 hour)", function () {
+  // setup
+  const seconds = 3600;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("60");
+});
+test("should return '3m' for 180 seconds", function () {
+  // setup
+  const seconds = 3 * 60;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("3m");
+});
+
+test("should return '1h' for 3600 seconds (1 hour)", function () {
+  // setup
+  const seconds = 3600;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("60m");
+});
+test("should return '2y 3w 4d 9h 45m 12s' for 755 days, 585 minutes and 12 seconds", function () {
+  // setup
+  const seconds = 755 * DAYS_IN_SECONDS + 585 * 60 + 12;
+
+  // execute
+  const result = time(seconds);
+
+  // expectation
+  expect(result).toEqual("2y 3w 4d 9h 45m 12s");
+});
+
