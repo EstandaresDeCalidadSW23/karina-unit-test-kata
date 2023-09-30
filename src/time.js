@@ -1,6 +1,3 @@
-// src/time.js
-// src/time.js
-
 const SECONDS_IN_DAY = 86400; // 24 horas x 60 minutos x 60 segundos = 86400 segundos en un día
 const SECONDS_IN_WEEK = 604800; // 7 días x 24 horas x 60 minutos x 60 segundos = 604800 segundos en una semana
 const SECONDS_IN_YEAR = 31536000; // 365 días x 24 horas x 60 minutos x 60 segundos = 31536000 segundos en un año
@@ -37,7 +34,7 @@ function time(seconds) {
     result.push(seconds + "s");
   }
 
-  return result.join(" ");
+  return result.join(" ") || "0s";
 }
 
 module.exports = time;
